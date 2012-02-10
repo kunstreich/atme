@@ -1,0 +1,8 @@
+bypass_cache: true
+---
+title: Imprint
+---
+content:
+Lorem ipsum 
+
+I can be contacted at: <hi@yourdomain.com>.
