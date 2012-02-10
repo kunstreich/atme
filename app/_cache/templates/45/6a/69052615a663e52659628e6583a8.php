@@ -26,18 +26,16 @@ class __TwigTemplate_456a69052615a663e52659628e6583a8 extends Twig_Template
         if (isset($context["page"])) { $_page_ = $context["page"]; } else { $_page_ = null; }
         echo $this->getAttribute($_page_, "root_path");
         echo "/?/feed/\">
-    <link rel=\"stylesheet\" href=\"";
+    ";
         // line 8
-        if (isset($context["page"])) { $_page_ = $context["page"]; } else { $_page_ = null; }
-        echo $this->getAttribute($_page_, "root_path");
-        echo "/public/docs/css/screen.css\" type=\"text/css\" media=\"screen\">
-  </head>
+        $this->env->loadTemplate("partials/styles.html")->display($context);
+        // line 9
+        echo "  </head>
   <body>
-    <h6>ficken</h6>
     <div id=\"container\">
       <h1 class=\"col three\">
         <a href=\"";
-        // line 14
+        // line 13
         if (isset($context["page"])) { $_page_ = $context["page"]; } else { $_page_ = null; }
         echo $this->getAttribute($_page_, "root_path");
         echo "\">";
@@ -45,30 +43,30 @@ class __TwigTemplate_456a69052615a663e52659628e6583a8 extends Twig_Template
         echo $this->getAttribute($_page_, "name");
         echo "</a>
         <strong>";
-        // line 15
+        // line 14
         if (isset($context["page"])) { $_page_ = $context["page"]; } else { $_page_ = null; }
         echo $this->getAttribute($_page_, "profession");
         echo "</strong>
       </h1>
       <em class=\"col three\">";
-        // line 17
+        // line 16
         if (isset($context["page"])) { $_page_ = $context["page"]; } else { $_page_ = null; }
         echo $this->getAttribute($_page_, "email");
         echo "</em>
       <hr>
       ";
-        // line 19
+        // line 18
         $this->env->loadTemplate("partials/navigation/navigation.html")->display($context);
-        // line 20
+        // line 19
         echo "      <div id=\"content\" class=\"col eight\">
         ";
-        // line 21
+        // line 20
         $this->env->loadTemplate("partials/navigation/category-lists.html")->display($context);
-        // line 22
+        // line 21
         echo "      </div>
       <hr>
       <p id=\"footer\" class=\"col six\">&copy; Copyright ";
-        // line 24
+        // line 23
         if (isset($context["page"])) { $_page_ = $context["page"]; } else { $_page_ = null; }
         echo $this->getAttribute($_page_, "name");
         echo " ";
@@ -80,9 +78,9 @@ class __TwigTemplate_456a69052615a663e52659628e6583a8 extends Twig_Template
         echo "/?/feed/\">RSS</a><br>
         <em>Content managed by <a href=\"http://www.staceyapp.com\">stacey</a></em></p>
     </div>
-  </body>
-</html>
-";
+    ";
+        // line 26
+        $this->env->loadTemplate("partials/footer.html")->display($context);
     }
 
     public function getTemplateName()
